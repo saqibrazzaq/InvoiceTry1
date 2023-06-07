@@ -12,7 +12,7 @@ namespace api.Dtos
         public Bill? Bill { get; set; }
 
         public int? ServiceId { get; set; }
-        public Service? Service { get; set; }
+        public Product? Service { get; set; }
 
         public string? Description { get; set; }
         public double Quantity { get; set; }

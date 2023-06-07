@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace api.Repositories
+namespace api.Repositories.Implementation
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
@@ -15,8 +15,9 @@ namespace api.Repositories
             _context = context;
         }
 
-        public void Create(T entity)
+        public void Create(T? entity)
         {
+            if (entity == null) { throw new ArgumentNullException(nameof(entity)); }
             _context.Set<T>().Add(entity);
         }
 
@@ -25,8 +26,9 @@ namespace api.Repositories
             _context.Set<T>().AddRange(entities);
         }
 
-        public void Delete(T entity)
+        public void Delete(T? entity)
         {
+            if (entity == null) { throw new ArgumentNullException(nameof(entity)); }
             _context.Set<T>().Remove(entity);
         }
 

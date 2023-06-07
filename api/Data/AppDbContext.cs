@@ -32,8 +32,8 @@ namespace api.Data
         public DbSet<Profile>? Profiles { get; set; }
         public DbSet<SalesTax>? SalesTaxes { get; set; }
         public DbSet<SalesTaxRate>? SalesTaxRates { get; set; }
-        public DbSet<Service>? Services { get; set; }
-        public DbSet<ServiceSalesTax>? ServiceSalesTaxes { get; set; }
+        public DbSet<Product>? Products { get; set; }
+        public DbSet<ProductSalesTax>? ProductSalesTaxes { get; set; }
         public DbSet<State>? States { get; set; }
         public DbSet<Vendor>? Vendors { get; set; }
     }

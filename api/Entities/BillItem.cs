@@ -15,7 +15,7 @@ namespace api.Entities
 
         public int? ServiceId { get; set; }
         [ForeignKey(nameof(ServiceId))]
-        public Service? Service { get; set; }
+        public Product? Service { get; set; }
 
         public string? Description { get; set; }
         public double Quantity { get; set; } = 1;

@@ -26,8 +26,8 @@ namespace api.Repositories.Implementation
         private readonly Lazy<IProfileRepository> _profileRepository;
         private readonly Lazy<ISalesTaxRepository> _salesTaxRepository;
         private readonly Lazy<ISalesTaxRateRepository> _salesTaxRateRepository;
-        private readonly Lazy<IServiceRepository> _serviceRepository;
-        private readonly Lazy<IServiceSalesTaxRepository> _serviceSalesTaxRepository;
+        private readonly Lazy<IProductRepository> _productRepository;
+        private readonly Lazy<IProductSalesTaxRepository> _productSalesTaxRepository;
         private readonly Lazy<IStateRepository> _stateRepository;
         private readonly Lazy<IVendorRepository> _vendorRepository;
 
@@ -76,10 +76,10 @@ namespace api.Repositories.Implementation
                 new SalesTaxRepository(context));
             _salesTaxRateRepository = new Lazy<ISalesTaxRateRepository>(() =>
                 new SalesTaxRateRepository(context));
-            _serviceRepository = new Lazy<IServiceRepository>(() =>
-                new ServiceRepository(context));
-            _serviceSalesTaxRepository = new Lazy<IServiceSalesTaxRepository>(() =>
-                new ServiceSalesTaxRepository(context));
+            _productRepository = new Lazy<IProductRepository>(() =>
+                new ProductRepository(context));
+            _productSalesTaxRepository = new Lazy<IProductSalesTaxRepository>(() =>
+                new ProductSalesTaxRepository(context));
             _stateRepository = new Lazy<IStateRepository>(() =>
                 new StateRepository(context));
             _vendorRepository = new Lazy<IVendorRepository>(() =>
@@ -89,6 +89,7 @@ namespace api.Repositories.Implementation
         public IAddressRepository AddressRepository => _addressRepository.Value;
         public IBillRepository BillRepository => _billRepository.Value;
         public IBillItemRepository BillItemRepository => _billItemRepository.Value;
+        public IBillItemSalesTaxRepository BillItemSalesTaxRepository => _billItemSalesTaxRepository.Value;
         public IBusinessRepository BusinessRepository => _businessRepository.Value;
         public ICountryRepository CountryRepository => _countryRepository.Value;
         public ICurrencyRepository CurrencyRepository => _currencyRepository.Value;
@@ -105,8 +106,8 @@ namespace api.Repositories.Implementation
         public IProfileRepository ProfileRepository => _profileRepository.Value;
         public ISalesTaxRepository SalesTaxRepository => _salesTaxRepository.Value;
         public ISalesTaxRateRepository SalesTaxRateRepository => _salesTaxRateRepository.Value;
-        public IServiceRepository ServiceRepository => _serviceRepository.Value;
-        public IServiceSalesTaxRepository ServiceSalesTaxRepository => _serviceSalesTaxRepository.Value;
+        public IProductRepository ProductRepository => _productRepository.Value;
+        public IProductSalesTaxRepository ProductSalesTaxRepository => _productSalesTaxRepository.Value;
         public IStateRepository StateRepository => _stateRepository.Value;
         public IVendorRepository VendorRepository => _vendorRepository.Value;
         public void Save()

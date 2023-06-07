@@ -7,7 +7,7 @@ namespace api.Dtos
     public class CustomerContactRes
     {
         public int CustomerContactId { get; set; }
-        public bool IsPrimary { get; set; };
+        public bool IsPrimary { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }

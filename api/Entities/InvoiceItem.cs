@@ -14,9 +14,9 @@ namespace api.Entities
         [ForeignKey(nameof(InvoiceId))]
         public Invoice? Invoice { get; set; }
 
-        public int? ServiceId { get; set; }
-        [ForeignKey(nameof(ServiceId))]
-        public Service? Service { get; set; }
+        public int? ProductId { get; set; }
+        [ForeignKey(nameof(ProductId))]
+        public Product? Product { get; set; }
 
         public string? Description { get; set; }
         public double Quantity { get; set; } = 1;

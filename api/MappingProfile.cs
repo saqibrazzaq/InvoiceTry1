@@ -89,12 +89,12 @@ namespace api
             CreateMap<SalesTaxRateReqEdit,  SalesTaxRate>();
 
             // Service
-            CreateMap<Service, ServiceRes>();
-            CreateMap<ServiceReqEdit, Service>();
+            CreateMap<Product, ProductRes>();
+            CreateMap<ProductReqEdit, Product>();
 
             // ServiceSalesTax
-            CreateMap<ServiceSalesTax, ServiceSalesTaxRes>();
-            CreateMap<ServiceSalesTaxReqEdit, ServiceSalesTax>();
+            CreateMap<ProductSalesTax, ProductSalesTaxRes>();
+            CreateMap<ProductSalesTaxReqEdit, ProductSalesTax>();
 
             // State
             CreateMap<State, StateRes>();

@@ -12,8 +12,8 @@ namespace api.Dtos
         public int? InvoiceId { get; set; }
         public Invoice? Invoice { get; set; }
 
-        public int? ServiceId { get; set; }
-        public Service? Service { get; set; }
+        public int? ProductId { get; set; }
+        public Product? Product { get; set; }
 
         public string? Description { get; set; }
         public double Quantity { get; set; }
@@ -23,7 +23,7 @@ namespace api.Dtos
     public class InvoiceItemReqEdit
     {
         public int? InvoiceId { get; set; }
-        public int? ServiceId { get; set; }
+        public int? ProductId { get; set; }
         
         public string? Description { get; set; }
         public double Quantity { get; set; } = 1;

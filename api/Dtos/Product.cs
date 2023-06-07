@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace api.Dtos
 {
-    public class ServiceRes
+    public class ProductRes
     {
-        public int ServiceId { get; set; }
+        public int ProductId { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
         public double Price { get; set; }
@@ -19,9 +19,9 @@ namespace api.Dtos
         public Business? Business { get; set; }
     }
 
-    public class ServiceReqEdit
+    public class ProductReqEdit
     {
-        public int ServiceId { get; set; }
+        public int ProductId { get; set; }
         [Required, MinLength(1)]
         public string? Name { get; set; }
         public string? Description { get; set; }
@@ -33,7 +33,7 @@ namespace api.Dtos
         
     }
 
-    public class ServiceReqSearch : PagedReq
+    public class ProductReqSearch : PagedReq
     {
 
     }

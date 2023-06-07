@@ -5,6 +5,7 @@
         IAddressRepository AddressRepository { get; }
         IBillRepository BillRepository { get; }
         IBillItemRepository BillItemRepository { get; }
+        IBillItemSalesTaxRepository BillItemSalesTaxRepository { get; }
         IBusinessRepository BusinessRepository { get; }
         ICountryRepository CountryRepository { get; }
         ICurrencyRepository CurrencyRepository { get; }
@@ -21,8 +22,8 @@
         IProfileRepository ProfileRepository { get; }   
         ISalesTaxRepository SalesTaxRepository { get; }
         ISalesTaxRateRepository SalesTaxRateRepository { get; }
-        IServiceRepository ServiceRepository { get; }
-        IServiceSalesTaxRepository ServiceSalesTaxRepository { get; }
+        IProductRepository ProductRepository { get; }
+        IProductSalesTaxRepository ProductSalesTaxRepository { get; }
         IStateRepository StateRepository { get; }
         IVendorRepository VendorRepository { get; }
         void Save();

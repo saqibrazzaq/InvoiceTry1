@@ -4,9 +4,9 @@ using api.Repositories.Interfaces;
 
 namespace api.Repositories.Implementation
 {
-    public class ServiceRepository : RepositoryBase<Service>, IServiceRepository
+    public class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
-        public ServiceRepository(AppDbContext context) : base(context)
+        public ProductRepository(AppDbContext context) : base(context)
         {
         }
     }

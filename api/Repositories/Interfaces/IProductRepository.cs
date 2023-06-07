@@ -2,7 +2,7 @@
 
 namespace api.Repositories.Interfaces
 {
-    public interface IServiceRepository : IRepositoryBase<Service>
+    public interface IProductRepository : IRepositoryBase<Product>
     {
     }
 }

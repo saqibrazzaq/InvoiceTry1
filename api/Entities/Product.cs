@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace api.Entities
 {
-    [Table("Service")]
-    public class Service
+    [Table("Product")]
+    public class Product
     {
         [Key]
-        public int ServiceId { get; set; }
+        public int ProductId { get; set; }
         [Required, MinLength(1)]
         public string? Name { get; set; }
         public string? Description { get; set; }
